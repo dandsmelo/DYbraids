@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    background-color: #F5F5F5;
+    font-family: "Poppins";
+}
+#top{
+    display: inline-flex;
+}
+#txtBusca{
+    background-color: white;
+    border: none;
+    width: 831px;
+    height: 53px;
+    border-radius: 10px;
+}
+#btnBusca{
+    background-color: #593B38;
+    border-radius: 10px;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #593B38;
+}
