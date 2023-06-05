@@ -13,6 +13,8 @@
     width: 831px;
     height: 53px;
     border-radius: 10px;
+    margin-right: 0;
+    text-align: left;
 }
 #btnBusca{
     background-color: #593B38;
