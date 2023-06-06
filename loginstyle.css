@@ -9,19 +9,26 @@ body{
     margin: 0;
 }
 #container{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
     align-items: center;
+    justify-content: center;
     margin:0;
 }
 #divinha{
-    width: 700px;
+    width: 1100px;
+    height:  650px;
     display: inline-flex;
-
+    background-color: #ffff;
+    border-radius: 5px;
 }
 #box{
     background-color: #593B38;
     width: 100%;
     display: flex;
+    border-radius: 0 5px 5px 0;
 }
 img{
     width: auto;
@@ -30,38 +37,47 @@ img{
     width: 100% ;
     margin-right: 0;
     margin-left: 0;
+    border-radius: 5px;
 }
-h3{
+h4{
     color: #593B38;
     text-align: center;
     font-size: 50px;
+    font-weight: 500;
     margin-bottom: 0;
+    text-decoration: none;
 }
 #forms{
-    background-color: #F5F5F5;
+    /*background-color: #F5F5F5;*/
     width: 100%;
-    height: auto;
     border-radius: 10px;
-    align-items: center;
+    margin-top: 140px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
 }
 .inputinhos{
     background-color: #ffff;
     border-radius: 5px;
-    border-style: none;
-    width: 400px;
+    border-color: #D9D9D9;
+    padding-left: 10px;
+    width: 350px;
     height: 35px;
     color: #B1AEAE;
     margin: 10px;
-    font-size: 15px;
-    align-items: center;
+    font-size: 17px;
 }
 #entrar{
     background-color: #593B38;
     color: #ffff;
     border-radius: 5px;
     border: none;
-    width: 401px;
-    height: 35px;
+    width: 355px;
+    height: 40px;
     margin: 10px;
-    font-size: 15px;
+    font-size: 20px;
+}
+#forgetpassword{
+    text-decoration: none;
+    color: #B1AEAE;
 }
