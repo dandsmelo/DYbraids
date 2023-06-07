@@ -18,7 +18,7 @@
 }
 
 #direita{
-    
+    margin-left: 30px;
     width: 300px;
     height: 200px;
 }
@@ -26,7 +26,7 @@
 #descricao{
     display: flex;
     flex-direction:row;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 
 #resumo{
@@ -35,4 +35,16 @@
 
 li{
     list-style-type: none;
+}
+
+#prodcarri{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+#contar{
+    width: 50px;
+    height: 30px;
 }
