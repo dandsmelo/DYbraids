@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pagstyle.css">
+    <title>Pagamento</title>
+</head>
+<body>
+    <div>
+        <img src="###" id="logo"/>
+        Marca
+    </div>
+    <div id="container">
+
+        <div class="item1">
+
+            <div id="endereço">
+                <form>
+                    <h2>Endereço de envio</h2>
+                    <input type="tel" class="inputinhos"  placeholder="CEP"><br>
+                    <input type="text" class="inputinhos" placeholder="Logradouro"><br>
+    
+                    <input type="tel" class="littleinputs" placeholder="Número">
+                    <input type="text" class="littleinputs" placeholder="Bairro"><br>
+    
+                    <input type="text" class="littleinputs" placeholder="Cidade">
+                    <!--<label for="estado">Estado</label>-->
+                    <select class="littleinputs" name="estado" id="estado">
+                        <option class="option" value="Estado">Estado</option>
+                        <option class="option" value="SP">SP</option>
+                        <option class="option" value="RJ">RJ</option>
+                        <option class="option" value="PB">PB</option>
+                    </select><br>
+    
+                    <input type="tel" class="inputinhos" placeholder="CPF"><br>
+
+                    <button type="reset" class="button">Limpar</button>
+                    <button type="submit" class="button">Salvar</button>
+                </form>
+            </div>
+
+            <div id="pagamento">
+                <h2>Método de pagamento</h2>
+
+                <span>
+                    <input type="radio" class="pag" name="crédito">
+                    <img src="cartao.png" class="icon">
+                    <label for="credit">Cartão de crédito com parcelamento</label>
+                </span><br>
+
+                <span>
+                    <input type="radio" class="pag" name="pix">
+                    <img src="icons8-pix-50.png" class="icon">
+                    <label for="credit">Pix</label>
+                </span><br>
+
+                <span>
+                    <input type="radio" class="pag" name="débito">
+                    <img src="cartao.png" class="icon">
+                    <label for="credit">Cartão de débito</label>
+                </span>
+                
+            </div>
+        </div>
+
+        <div class="item3">
+            <h2>Resumo do pedido</h2>
+            <button id="button">Finalizar pedido</button>
+        </div>
+    </div>
+</body>
+</html>
