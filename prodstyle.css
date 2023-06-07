@@ -5,33 +5,68 @@
     font-family: "Poppins";
 }
 #top{
-    display: inline-flex;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+
 }
 #txtBusca{
     background-color: white;
     border: none;
     width: 831px;
-    height: 53px;
+    height: 40px;
     border-radius: 10px;
     margin-right: 0;
     text-align: left;
 }
+
 #btnBusca{
     background-color: #593B38;
     border-radius: 10px;
     margin: 0;
 }
+
+#divBusca{
+    display: flex;
+    align-items:center;
+}
+
+#btnCarrinho{
+    display: flex;
+    align-content:end;
+}
+
 a{
     text-decoration: none;
     color: #593B38;
+    margin-right: 10px;
+}
+
+#entrar{
+    
+    margin:10px;
 }
 
 .linha{
     display: flex;
     flex-direction:row;
     align-content:space-around;
-    justify-content:center;
+    justify-content:space-evenly;
     margin: 10px;
     bottom: 10px;
+    margin-top: 20px;
     
+}
+
+.info{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.preco{
+    display:flex;
+    justify-content: center;
+    margin-left: 15px;
 }
