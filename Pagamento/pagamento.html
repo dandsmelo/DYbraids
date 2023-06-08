@@ -10,7 +10,7 @@
 <body>
     <div>
         <img src="###" id="logo"/>
-        Marca
+        <label for="Marca">DY Braids</label>
     </div>
     <div id="container">
 
@@ -26,12 +26,35 @@
                     <input type="text" class="littleinputs" placeholder="Bairro"><br>
     
                     <input type="text" class="littleinputs" placeholder="Cidade">
-                    <!--<label for="estado">Estado</label>-->
                     <select class="littleinputs" name="estado" id="estado">
                         <option class="option" value="Estado">Estado</option>
-                        <option class="option" value="SP">SP</option>
-                        <option class="option" value="RJ">RJ</option>
-                        <option class="option" value="PB">PB</option>
+                        <option class="option" value="AC">Acre</option>
+                        <option class="option" value="AL">Alagoas</option>
+                        <option class="option" value="AP">Amapá</option>
+                        <option class="option" value="AM">Amazonas</option>
+                        <option class="option" value="BA">Bahia</option>
+                        <option class="option" value="CE">Ceará</option>
+                        <option class="option" value="DF">Distrito Federal</option>
+                        <option class="option" value="ES">Espírito Santo</option>
+                        <option class="option" value="GO">Goiás</option>
+                        <option class="option" value="MA">Maranhão</option>
+                        <option class="option" value="MT">Mato Grosso</option>
+                        <option class="option" value="MS">Mato Grosso do Sul</option>
+                        <option class="option" value="MG">Minas Gerais</option>
+                        <option class="option" value="PA">Pará</option>
+                        <option class="option" value="PB">Paraíba</option>
+                        <option class="option" value="PR">Paraná</option>
+                        <option class="option" value="PE">Pernambuco</option>
+                        <option class="option" value="PI">Piauí</option>
+                        <option class="option" value="RJ">Rio de Janeiro</option>
+                        <option class="option" value="RN">Rio Grande do Norte</option>
+                        <option class="option" value="RS">Rio Grande do Sul</option>
+                        <option class="option" value="RO">Rondônia</option>
+                        <option class="option" value="RR">Roraima</option>
+                        <option class="option" value="SC">Santa Catarina</option>
+                        <option class="option" value="SP">São Paulo</option>
+                        <option class="option" value="SE">Sergipe</option>
+                        <option class="option" value="TO">Tocantins</option>
                     </select><br>
     
                     <input type="tel" class="inputinhos" placeholder="CPF"><br>
@@ -44,22 +67,62 @@
             <div id="pagamento">
                 <h2>Método de pagamento</h2>
 
-                <span>
+                <span class="radio">
                     <input type="radio" class="pag" name="crédito">
                     <img src="cartao.png" class="icon">
                     <label for="credit">Cartão de crédito com parcelamento</label>
-                </span><br>
+                </span>
+                <div class="hiddeninputs">
+                    <form>
+                        <span class="infocard">
+                            <label>Nº do Cartão</label><br>
+                            <input type="tel" class="inputinhos">
+                        </span>
+                        <br>
+                        <span>
+                            <label>Nome do Cartão</label><br>
+                            <input type="text" class="inputinhos">
+                        </span>
+                        <br>
 
-                <span>
+                        <select class="littleinputs" name="mês" id="mes">
+                            <option class="option" value="mes">Mês</option>
+                            <option class="option" value="Jan">Janeiro</option>
+                            <option class="option" value="Fev">Fevereiro</option>
+                            <option class="option" value="Mar">Março</option>
+                            <option class="option" value="Abr">Abril</option>
+                            <option class="option" value="Mai">Maio</option>
+                            <option class="option" value="Jun">Junho</option>
+                            <option class="option" value="Jul">Julho</option>
+                            <option class="option" value="Ago">Agosto</option>
+                            <option class="option" value="Set">Setembro</option>
+                            <option class="option" value="Out">Outubro</option>
+                            <option class="option" value="Nov">Novembro</option>
+                            <option class="option" value="Dez">Dezembro</option>
+                        </select>
+                        <select class="littleinputs" name="ano" id="ano">
+                            <option class="option" value="ano">Ano</option>
+                        </select><br>
+                        <span>
+                            <label for="num">Código de segurança</label><br>
+                            <input type="tel" class="inputinhos">
+                        </span>
+                       
+
+                    </form>
+                </div>
+                <br>
+
+                <span class="radio">
                     <input type="radio" class="pag" name="pix">
                     <img src="icons8-pix-50.png" class="icon">
                     <label for="credit">Pix</label>
                 </span><br>
 
-                <span>
+                <span class="radio">
                     <input type="radio" class="pag" name="débito">
                     <img src="cartao.png" class="icon">
-                    <label for="credit">Cartão de débito</label>
+                    <label for="debito">Cartão de débito</label>
                 </span>
                 
             </div>

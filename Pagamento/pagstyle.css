@@ -90,7 +90,8 @@ input.pag{
 .icon{
     width: 50px;
 }
-span{
+.radio{
     align-items: center;
     justify-content: center;
+    width: 300px;
 }
