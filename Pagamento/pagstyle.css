@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: "Poppins";
+}
+body{
+    background-color: #F5F5F5;
+    height: auto;
+    margin: 0% 5% 0% 5%;
+}
+#container{
+    display: grid;
+}
+/*.item1{
+    width: 90%;
+}*/
+.item3{
+    grid-column: 2/2;
+    background-color: #593B38;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#endereço{
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 0;
+    display: inline-flex;
+}
+.inputinhos{
+    background-color: #ffff;
+    border-radius: 5px;
+    border-style: none;
+    width: 550px;
+    height: 40px;
+    padding-left: 10px;
+    color: #B1AEAE;
+    margin: 10px 0px 0px 10px;
+    font-size: 15px;
+}
+.littleinputs{
+    background-color: #ffff;
+    border-radius: 5px;
+    border-style: none;
+    width: 261px;
+    height: 40px;
+    padding-left: 10px;
+    color: #B1AEAE;
+    margin: 10px 0px 0px 10px;
+    font-size: 15px;
+}
+#estado{
+    width: 272px;
+}
+.option{
+    color: #B1AEAE;
+}
+h2{
+    color: #593B38;
+    margin: 19px 0 0 10px;
+}
+.item3 h2{
+    color: #ffff;
+}
+.button{
+    background-color: #593B38;
+    color: #ffff;
+    border-style: none;
+    height: 40px;
+    width: 272px;
+    border-radius: 5px;
+    margin: 10px 0px 0px 10px;
+}
+#pagamento{
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 0;
+}
+input.pag{
+    background-color: #593B38;
+}
+#button{
+    background-color: #ffff;
+    color: #593B38;
+    border-radius: 5px;
+    border-style: none;
+}
+.icon{
+    width: 50px;
+}
+.radio{
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
