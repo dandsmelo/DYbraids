@@ -81,3 +81,7 @@ button {
     cursor: pointer;
   }
   
+  #carr{
+    display: flex;
+    justify-content:flex-end;
+  }

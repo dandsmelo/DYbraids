@@ -35,6 +35,9 @@
 
 li{
     list-style-type: none;
+    color: white;
+    background-color: #593B38;
+    
 }
 
 #prodcarri{
@@ -47,4 +50,29 @@ li{
 #contar{
     width: 50px;
     height: 30px;
+}
+
+#carrinho{
+    grid-column: 2/2;
+    background-color: #593B38;
+    width: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+button{
+    background-color: #593B38;
+}
+
+#resu, #tota, #total{
+    color: white;
+    background-color: #593B38;
+}
+
+h1{
+    display: flex;
+    justify-content:flex-start;
+    margin-left: 255px;
 }
