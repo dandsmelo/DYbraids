@@ -21,7 +21,19 @@ function adicionarProduto(nome, preco) {
     document.getElementById("total").textContent = total.toFixed(2);
   }
 
-  // Chamada inicial para exibir o carrinho caso exista
+ 
   exibirCarrinho();
 
-  
+  var contador = 0;
+
+function incrementar() {
+  contador++;
+  document.getElementById("contador").textContent = contador;
+}
+
+function decrementar() {
+  if (contador > 0) {
+    contador--;
+    document.getElementById("contador").textContent = contador;
+  }
+}
