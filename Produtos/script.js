@@ -23,3 +23,5 @@ function adicionarProduto(nome, preco) {
 
   // Chamada inicial para exibir o carrinho caso exista
   exibirCarrinho();
+
+  
