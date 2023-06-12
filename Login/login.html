@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="loginstyle.css">
     <title>Login</title>
+    <script src="loginscript.js"></script> 
+    <link rel="stylesheet" type="text/css" href="loginstyle.css"><!-- Certifique-se de fornecer o caminho correto para o arquivo JS -->
 </head>
 <body>
     <div id="container">
         <div id="divinha">
             <div id="div">
-                <form id="forms">
+                <form id="forms" onsubmit="login(); return false;"> <!-- Chama a função login() quando o formulário é enviado -->
                     <h4>Login</h4><br>
                     
-                    <input type="text" class="inputinhos" placeholder="Email">
-                    <input type="password" class="inputinhos" placeholder="Senha">
+                    <input type="text" class="inputinhos" id="nome" placeholder="Nome">
+                    <input type="password" class="inputinhos" id="senha" placeholder="Senha">
                     <button type="submit" id="entrar">Logar</button><br>
 
                     <a href="" id="forgetpassword">Esqueceu sua senha?</a>
