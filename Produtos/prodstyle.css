@@ -88,3 +88,8 @@ button {
     bottom: 20px; 
     right: 20px; 
   }
+
+  #fotos{
+    width: 229px;
+    height: 315px;
+  }
