@@ -99,3 +99,15 @@ p{
     text-decoration: none;
     color: #B1AEAE;
 }
+#cadastro{
+    background-color: #593B38;
+    color: #ffff;
+    border-radius: 5px;
+    border: none;
+    width: 355px;
+    height: 40px;
+    margin: 10px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
