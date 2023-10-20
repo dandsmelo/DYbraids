@@ -19,7 +19,7 @@
     padding: 20px;
 }
 
-p, {
+p {
     background-color:white;
 }
 
@@ -31,16 +31,17 @@ p, {
     background-color:white;
 }
 
-#resumo{
-    
-}
-
 li{
     list-style-type: none;
     color: black;
     background-color: white;
     
 }
+
+ul, li{
+    list-style: none;
+}
+    
 
 .cart{
     display: flex;
@@ -65,13 +66,20 @@ li{
     padding: 20px;
 }
 
-#compre{
+#compre, #tota{
     background-color: white;
+    position: relative;
+    top:350px;
 }
 
 #resu, #tota, #total{
     color: black;
     background-color: white;
+}
+
+#resu{
+    position: absolute;
+    top:130px;
 }
 
 h1{
@@ -113,4 +121,14 @@ p{
     height: 200px;
     background-color: #593B38; 
     border-radius: 10px;
+}
+
+/*BOTÃO COMPRAR*/
+
+#compre{
+    background-color: #593B38;
+    color:white;
+    border-radius: 15px;
+    width: 110px;
+    height: 30px;
 }

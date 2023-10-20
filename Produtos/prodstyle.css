@@ -79,8 +79,14 @@ button {
     font-size: inherit;
     font-family: inherit;
     cursor: pointer;
+    border-radius:5px ;
   }
   
+  button:hover{
+    background-color:#593B38;
+  }
+
+
   #carr{
     display: flex;
     justify-content:flex-end;   
@@ -98,3 +104,5 @@ button {
   img{
     object-fit: cover;
   }
+
+  
