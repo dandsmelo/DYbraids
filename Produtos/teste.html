@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .produto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            float: left;
+        }
+
+        .cart {
+            border: 1px solid #333;
+            padding: 10px;
+            margin: 10px;
+            width: 500px; /* Largura maior */
+            height: 300px; /* Altura maior */
+            float: left;
+        }
+
+        .adicionarProduto{
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .adicionarProduto:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="produto">
+        <img src="prod01.jpg" alt="Produto 1">
+        <h2>Produto 1</h2>
+        <p>Descrição do Produto 1</p>
+        <button class="adicionarProduto" data-product="Produto 1" data-price="10.00" data-image="produto1.jpg">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="produto2.jpg" alt="Produto 2">
+        <h2>Produto 2</h2>
+        <p>Descrição do Produto 2</p>
+        <button class="adicionarProduto" data-product="Produto 2" data-price="20.00" data-image="produto2.jpg">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="cart">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: R$ <span id="cart-total">0.00</span></p>
+    </div>
+
+    <script>
+        // Função para adicionar um produto ao carrinho
+        function addToCart(produto, price, image) {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            // Crie um novo item de carrinho
+            const cartItem = document.createElement('li');
+            const cartItemImage = document.createElement('img');
+            cartItemImage.src = image;
+
+            const cartItemText = document.createTextNode(produto + ' - R$ ' + price);
+            cartItem.appendChild(cartItemImage);
+            cartItem.appendChild(cartItemText);
+
+            // Adicione o item ao carrinho
+            cartItems.appendChild(cartItem);
+
+            // Atualize o total do carrinho
+            const currentTotal = parseFloat(cartTotal.textContent);
+            cartTotal.textContent = (currentTotal + price).toFixed(2);
+        }
+
+        // Adicione eventos de clique aos botões "Adicionar ao Carrinho"
+        const addToCartButtons = document.querySelectorAll('.adicionarProduto');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const produto = button.getAttribute('data-product');
+                const price = parseFloat(button.getAttribute('data-price'));
+                const image = button.getAttribute('data-image');
+                addToCart(produto, price, image);
+            });
+        });
+    </script>
+</body>
+</html>
