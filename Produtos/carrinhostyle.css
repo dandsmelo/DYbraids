@@ -23,11 +23,6 @@ p, {
     background-color:white;
 }
 
-#direita{
-    margin-left: 30px;
-    width: 300px;
-    height: 200px;
-}
 
 #descricao{
     display: flex;
@@ -42,12 +37,12 @@ p, {
 
 li{
     list-style-type: none;
-    color: white;
-    background-color: #593B38;
+    color: black;
+    background-color: white;
     
 }
 
-#prodcarri{
+.cart{
     display: flex;
     flex-direction:row;
     justify-content:space-between;
@@ -62,7 +57,7 @@ li{
 
 #carrinho{
     grid-column: 2/2;
-    background-color: #593B38;
+    background-color: white;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -71,12 +66,12 @@ li{
 }
 
 #compre{
-    background-color: #593B38;
+    background-color: white;
 }
 
 #resu, #tota, #total{
-    color: white;
-    background-color: #593B38;
+    color: black;
+    background-color: white;
 }
 
 h1{
@@ -103,3 +98,19 @@ p{
  #button1 {
     background-color:white;
   }
+
+  /*DIV PAGAMENTO*/
+
+  h3{
+    background-color: #593B38;
+    color:white;
+    padding-left: 20px;
+  }
+
+  #direita{
+    margin-left: 30px;
+    width: 300px;
+    height: 200px;
+    background-color: #593B38; 
+    border-radius: 10px;
+}

@@ -92,4 +92,9 @@ button {
   #fotos{
     width: 229px;
     height: 315px;
+    
+  }
+
+  img{
+    object-fit: cover;
   }
