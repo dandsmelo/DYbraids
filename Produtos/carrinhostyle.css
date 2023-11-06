@@ -206,3 +206,9 @@ p{
 #direita:hover #adicionar-forma-pagamento {
     display: block; /* Exibe o botão quando o cursor está sobre a div */
 }
+
+
+#itensCarrinho img{
+    width: 100px;
+    height: 150px;
+}
