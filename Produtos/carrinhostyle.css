@@ -106,9 +106,9 @@ ul, li{
     border-style: none;
 }
 
-#resu, #tota, #total{
-    color: black;
+#itensCarrinho li, ul, #tota{
     background-color: white;
+    color:#593B38;
 }
 
 p{
@@ -141,15 +141,20 @@ p{
     align-items: center;
 }
 
-#meio h2{
+#meio h2, ul, p, li, #totall{
     color: white;
     background-color: #593B38;
-    margin: 12px;
 }
 
-  /*DIV PAGAMENTO*/
+#meio h2 {
+    margin-bottom:12px;
+}
 
-  #direita{
+
+
+/*DIV PAGAMENTO*/
+
+#direita{
     margin: 10px 10px 0 30px;
     width: 500px;
     height: 200px;
