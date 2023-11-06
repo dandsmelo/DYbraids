@@ -12,14 +12,17 @@ body{
 }
 
 header{
-    margin: 20px;
+    margin:20px;
+    margin-left: 6%;
 }
 #container{
    justify-content: center;
    margin: 30px 80px 80px 80px;
    align-items: center;
 }
-
+#container h1{
+    margin-bottom: 10px ;
+}
 #colunas{
     display: flex;
     flex-direction:row;
@@ -27,7 +30,7 @@ header{
 
 #esquerda{
     background-color:white;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     border-radius: 10px;
     padding: 20px;
@@ -129,13 +132,19 @@ p{
  #button1 {
     background-color:white;
   }
-
+/* lado direito */
+.right-side{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+  
   /*resumo do pedido*/
 #meio{
     background-color: #593B38;
     border-radius: 10px;
-    margin: 30px;
-    width: 500px;
+    margin: 60px 30px 30px 30px;
+    width: 400px;
     padding: 10px;
     text-align: center;
     align-items: center;
@@ -165,6 +174,16 @@ p{
     margin-top: 10px;
     padding-left: 20px;
     margin: 0;
+}
+
+#button{
+    background-color: #ffff;
+    color: #593B38;
+    border-radius: 10px;
+    border-style: none;
+    width: 240px;
+    padding: 5px 0 5px 0;
+    font-size: 17px;
 }
 
 /*BOTÃO COMPRAR*/

@@ -10,23 +10,30 @@ body{
     height: auto;
     margin: 0% 5% 0% 5%;
 }
+
+.top{
+    margin: 20px;
+    margin-bottom: 0;
+}
+
 #container{
     display: flex;
-    justify-content: space-around;
 }
 .item1{
     margin-right: 50px;
 }
 .item3{
     background-color: #593B38;
-    width: 100%;
+    width: 400px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
-    /* position: fixed; */
+    margin: 60px 80px 0 0;
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 #endereço{
     width: 50%;
@@ -103,6 +110,10 @@ input.pag{
     display: grid;
     justify-content: space-around;
     margin: 10px 0 20px 0;
+}
+
+.hiddeninputs{
+    display: none;
 }
 
 .pag{

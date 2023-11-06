@@ -8,7 +8,7 @@
     <title>Pagamento</title>
 </head>
 <body>
-    <div>
+    <div class="top">
         <img src="###" id="logo"/>
         <label for="Marca">DY Braids</label>
     </div>
@@ -44,12 +44,12 @@
                     <h1>Método de pagamento</h1>
     
                     <span class="radio">
-                        <input type="radio" class="pag" name="crédito">
+                        <input type="radio" class="pag" name="crédito" id="show-content-radio">
                         <img src="cartao.png" class="icon">
                         <label for="credit">Cartão de crédito com parcelamento</label>
                     </span>
                     
-                    <div class="hiddeninputs">
+                    <div class="hiddeninputs" id="content">
                         <form>
                             <span class="infocard">
                                 <label>Nº do Cartão</label><br>
@@ -100,11 +100,11 @@
                     </span><br>
     
                     <span class="radio three">
-                        <input type="radio" class="pag" name="débito">
+                        <input type="radio" class="pag" name="débito" id="show-content-radio3">
                         <img src="cartao.png" class="icon">
                         <label for="debito">Cartão de débito</label>
                     </span>
-                    <div class="hiddeninputs">
+                    <div class="hiddeninputs" id="content3">
                         <span>
                             <label>Nome do Cartão</label><br>
                             <input type="text" class="inputinhos">
@@ -152,4 +152,5 @@
         </div>
     </div>
 </body>
+<script src="scriptpag.js"></script>
 </html>
