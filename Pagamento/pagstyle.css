@@ -2,6 +2,8 @@
 
 *{
     font-family: "Poppins";
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: #F5F5F5;
@@ -9,24 +11,24 @@ body{
     margin: 0% 5% 0% 5%;
 }
 #container{
-    display: grid;
+    display: flex;
+    justify-content: space-around;
 }
-/*.item1{
-    width: 90%;
-}*/
+.item1{
+    margin-right: 50px;
+}
 .item3{
-    grid-column: 2/2;
     background-color: #593B38;
     width: 100%;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 20px;
+    margin-top: 30px;
 }
 #endereço{
     width: 50%;
-    margin-left: 5%;
-    margin-right: 0;
     display: inline-flex;
 }
 .inputinhos{
@@ -57,7 +59,7 @@ body{
 .option{
     color: #B1AEAE;
 }
-h2{
+h1{
     color: #593B38;
     margin: 19px 0 0 10px;
 }
@@ -89,9 +91,19 @@ input.pag{
 }
 .icon{
     width: 50px;
+    grid-column: 2;
 }
 .radio{
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 430px;
+    display: grid;
+    justify-content: space-around;
+}
+
+.pag{
+    grid-column: 1;
+}
+.radio label{
+    grid-column: 3;
 }
