@@ -139,11 +139,13 @@ p{
     align-items: center;
 }
 
-#meio h2{
+#meio h2, ul, p, li, #totall{
     color: white;
     background-color: #593B38;
     margin: 12px;
 }
+
+
 
   /*DIV PAGAMENTO*/
 
