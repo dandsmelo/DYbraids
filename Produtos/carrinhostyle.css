@@ -3,12 +3,16 @@
 *{
     background-color: #F5F5F5;
     font-family: "Poppins";
+    color: #593B38 ;
+}
+#container{
+   justify-content: center;
+   margin: 20px;
 }
 
 #colunas{
-    display: flex;
+    display: grid;
     flex-direction:row;
-    justify-content:center;
 }
 
 #esquerda{
@@ -17,6 +21,8 @@
     height: 460px;
     border-radius: 10px;
     padding: 20px;
+    grid-row: 1/span 2;
+    grid-column: 1;
     
 }
 
@@ -58,9 +64,7 @@ ul, li{
 }
 
 #carrinho{
-    grid-column: 2/2;
     background-color: white;
-    width: 100%;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -75,6 +79,7 @@ ul, li{
 
 #compre{
     margin-top: 50px;
+    border-style: none;
 }
 
 #resu, #tota, #total{
@@ -82,15 +87,11 @@ ul, li{
     background-color: white;
 }
 
-#resu{
-    position: absolute;
-    top:130px;
-}
 
 h1{
     display: flex;
     justify-content:flex-start;
-    margin-left: 240px;
+    margin-left: 20px;
 }
 
 p{
@@ -112,23 +113,43 @@ p{
     background-color:white;
   }
 
+  /*resumo do pedido*/
+#meio{
+    grid-row: 1;
+    grid-column: 2;
+    background-color: #593B38;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#meio h3{
+    color: white;
+    background-color: #593B38;
+    margin: 10px;
+}
+
   /*DIV PAGAMENTO*/
 
   h3{
-    background-color: #593B38;
-    color:white;
+    color: #593B38;
     padding-left: 20px;
     margin: 0;
   }
 
   #direita{
-    margin-left: 30px;
+    margin: 10px 10px 0 30px;
     width: 300px;
     height: 200px;
-    background-color: #593B38; 
+    background-color: white; 
     border-radius: 10px;
+    grid-row: 2;
+    grid-column: 2;
 }
 
+#direita h3{
+    margin-top: 10px;
+    background-color: white;
+}
 
 /*BOTÃO COMPRAR*/
 
@@ -141,23 +162,17 @@ p{
 }
 
 #img-pagto{
-    background-color: #593B38;
     margin:0;
     padding: 0;
     width: 300px;
     display: flex;
     padding-top: 40px;
-}
-#direita:hover {
-    color: white; 
-}
-
-#direita:hover h3 {
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: white;
 }
 
 #direita:hover #img-pagto {
-    background-color: rgba(0, 0, 0, 0.815);;
+    background-color: rgba(0, 0, 0, 0.815);
+    margin-top: 20px;
 }
 #adicionar-forma-pagamento {
     display: none; 
