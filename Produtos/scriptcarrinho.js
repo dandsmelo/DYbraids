@@ -8,3 +8,5 @@ direita.addEventListener('mouseenter', () => {
 direita.addEventListener('mouseleave', () => {
     adicionarFormaPagamentoButton.style.display = 'none'; // Oculta o botão ao tirar o mouse da div
 });
+
+
