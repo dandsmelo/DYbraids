@@ -26,6 +26,7 @@ body{
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+    /* position: fixed; */
 }
 #endereço{
     width: 50%;
@@ -50,7 +51,7 @@ body{
     height: 40px;
     padding-left: 10px;
     color: #B1AEAE;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 0 0 10px;
     font-size: 15px;
 }
 #estado{
@@ -77,8 +78,7 @@ h1{
 }
 #pagamento{
     width: 100%;
-    margin-left: 5%;
-    margin-right: 0;
+    margin-top: 40px;
 }
 input.pag{
     background-color: #593B38;
@@ -86,8 +86,11 @@ input.pag{
 #button{
     background-color: #ffff;
     color: #593B38;
-    border-radius: 5px;
+    border-radius: 10px;
     border-style: none;
+    width: 240px;
+    padding: 5px 0 5px 0;
+    font-size: 17px;
 }
 .icon{
     width: 50px;
@@ -99,6 +102,7 @@ input.pag{
     width: 430px;
     display: grid;
     justify-content: space-around;
+    margin: 10px 0 20px 0;
 }
 
 .pag{
@@ -106,4 +110,33 @@ input.pag{
 }
 .radio label{
     grid-column: 3;
+}
+
+.hiddeninputs select{
+    width: 269px;
+}
+
+.hiddeninputs .inputinhos{
+    margin: 10px 0 10px 0;
+}
+
+.hiddeninputs .littleinputs{
+    margin-top: 10px;
+    margin: 0;
+}
+
+#titulo{
+    margin-top: 10px;
+}
+
+#mes{
+    margin-right: 10px;
+}
+
+.two{
+    width: 150px;
+}
+
+.three{
+    width: 260px;
 }
