@@ -16,15 +16,18 @@
     border: none;
     width: 831px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     margin-right: 0;
     text-align: left;
+    padding-left: 10px ;
 }
 
 #btnBusca{
     background-color: #593B38;
-    border-radius: 10px;
+    border-radius: 0 10px 10px 0;
     margin: 0;
+    height: 40px;
+    cursor: pointer;
 }
 
 #divBusca{
@@ -62,7 +65,8 @@ a{
 .info{
     display:flex;
     flex-direction: row;
-    justify-content:flex-start;
+    justify-content:center;
+    align-items: center;
 }
 
 .preco{
@@ -74,18 +78,22 @@ a{
 button {
     border: none;
     background-color: transparent;
-    padding: 0;
+    padding: 5px 25px 5px 25px;
     margin: 0;
     font-size: inherit;
     font-family: inherit;
+    font-weight: 500;
     cursor: pointer;
     border-radius:5px ;
+    align-items: center;
+    color: #593B38;
   }
   
   button:hover{
     background-color:#593B38;
+    color: #F5F5F5;
+    transition: 0.3s;
   }
-
 
   #carr{
     display: flex;
@@ -93,16 +101,28 @@ button {
     position: fixed;
     bottom: 20px; 
     right: 20px; 
+    transition: 0.35s;
+  }
+
+  #carr:hover{
+    transform: scale(0.9);
   }
 
   #fotos{
     width: 229px;
     height: 315px;
-    
+    transition: 0.35s;
+  }
+
+  #fotos:hover{
+    transform: scale(0.9);
+
   }
 
   img{
     object-fit: cover;
+    border-radius: 10px;
   }
+
 
   
