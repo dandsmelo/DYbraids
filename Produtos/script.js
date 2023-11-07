@@ -1,7 +1,20 @@
 // Função para adicionar produtos ao carrinho
 function adicionarProduto(nome, preco, imagem) {
   var carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || [];
-  carrinho.push({ nome: nome, preco: preco, imagem: imagem });
+  
+  // Verifique se o produto já está no carrinho
+  var produtoExistente = carrinho.find(function(item) {
+    return item.nome === nome;
+  });
+
+  if (produtoExistente) {
+    // Se o produto já existe, apenas aumente a quantidade
+    produtoExistente.quantidade += 1;
+  } else {
+    // Caso contrário, crie um novo item no carrinho
+    carrinho.push({ nome: nome, preco: preco, imagem: imagem, quantidade: 1 });
+  }
+
   sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
   exibirCarrinho();
   exibirCarrinhoResumo(); // Atualiza também o resumo do pedido
@@ -14,25 +27,28 @@ function exibirCarrinho() {
   var total = 0;
 
   listaItens.innerHTML = "";
+
   carrinho.forEach(function(item) {
     var li = document.createElement("li");
-    
-    var imagem = document.createElement("img");
-    imagem.src = item.imagem; // Exibir a imagem do produto
-  
 
-    var descricao = document.createTextNode(item.nome + " - R$" + item.preco.toFixed(2));
-    
+    var imagem = document.createElement("img");
+    imagem.src = item.imagem;
+
+    var quantidade = document.createTextNode(item.quantidade);
+    var valor = document.createTextNode("R$" + (item.preco * item.quantidade).toFixed(2));
+
     li.appendChild(imagem);
-    li.appendChild(descricao);
-    
+    li.appendChild(quantidade);
+    li.appendChild(valor);
+
     listaItens.appendChild(li);
-    
-    total += item.preco;
+
+    total += item.preco * item.quantidade;
   });
 
   document.getElementById("total").textContent = total.toFixed(2);
 }
+
 
 // Exibir o carrinho ao carregar a página
 exibirCarrinho();
@@ -52,15 +68,17 @@ function exibirCarrinhoResumo() {
   var total = 0;
 
   listaItens.innerHTML = "";
-  carrinho.forEach(function(item) {
+
+  carrinho.forEach(function (item) {
     var li = document.createElement("li");
-    li.textContent = item.nome + " - R$" + item.preco.toFixed(2);
+    li.textContent = item.nome + " - R$" + (item.preco * item.quantidade).toFixed(2);
     listaItens.appendChild(li);
-    total += item.preco;
+    total += item.preco * item.quantidade;
   });
 
   document.getElementById("totall").textContent = total.toFixed(2);
 }
+
 
 // Exibir o resumo do pedido ao carregar a página
 exibirCarrinhoResumo();

@@ -96,8 +96,31 @@ ul, li{
     align-items: center;
     border-radius: 10px;
     padding: 20px;
-}
+    display: flex;
+    
 
+}
+#itensCarrinho li {
+    display: flex; /* Use flexbox para organizar os elementos */
+    justify-content: space-between; /* Espaço igual entre os elementos */
+    align-items: center; /* Centralizar verticalmente */
+  }
+  
+  #itensCarrinho img {
+    flex: 1; /* A imagem ocupa 1/3 da largura */
+    margin-right: 10px; /* Espaço à direita da imagem */
+  }
+  
+  #itensCarrinho span {
+    flex: 1; /* A quantidade ocupa 1/3 da largura */
+    text-align: center; /* Centralizar o texto horizontalmente */
+  }
+  
+  #itensCarrinho p {
+    flex: 1; /* O valor ocupa 1/3 da largura */
+    text-align: right; /* Alinhar o texto à direita */
+  }
+  
 #compre, #tota{
     background-color: white;
     position: absolute;
