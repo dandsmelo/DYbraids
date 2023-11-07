@@ -81,6 +81,7 @@ h1{
     height: 40px;
     width: 272px;
     border-radius: 5px;
+    cursor: pointer;
     margin: 10px 0px 0px 10px;
 }
 #pagamento{
@@ -98,6 +99,7 @@ input.pag{
     width: 240px;
     padding: 5px 0 5px 0;
     font-size: 17px;
+    cursor: pointer;
 }
 .icon{
     width: 50px;

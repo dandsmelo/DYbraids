@@ -106,6 +106,7 @@ label{
     margin: 10px;
     font-size: 20px;
     padding: 0;
+    cursor: pointer;
 }
 #forgetpassword{
     text-decoration: none;
