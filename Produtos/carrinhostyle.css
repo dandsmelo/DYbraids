@@ -15,6 +15,20 @@ header{
     margin:20px;
     margin-left: 6%;
 }
+
+header > div{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#logo{
+    width: 30px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
 #container{
    justify-content: center;
    margin: 30px 80px 80px 80px;
@@ -46,7 +60,7 @@ header{
 }
 
 #tittles h3{
-    margin: 0 60px 10px 60px;
+    margin: 0 30px 10px 30px;
 }
 
 hr{

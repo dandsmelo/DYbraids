@@ -14,6 +14,19 @@ body{
 .top{
     margin: 20px;
     margin-bottom: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top > label{
+    color: #593B38;
+}
+
+#logo{
+    width: 30px;
+    border-radius: 100px;
+    margin-right: 10px;
 }
 
 #container{
