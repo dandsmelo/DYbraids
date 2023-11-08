@@ -92,12 +92,17 @@
                         </form>
                     </div>
                     <br>
-    
-                    <span class="radio two">
+                    
+                    <!--<span class="radio two">
                         <input type="radio" class="pag" name="pix">
                         <img src="icons8-pix-50.png" class="icon">
                         <label for="credit">Pix</label>
                     </span><br>
+
+                    <div >
+                        <label>Vencimento</label><br>
+                        <label>9/11 até 12h</label>
+                    </div>-->
     
                     <span class="radio three">
                         <input type="radio" class="pag" name="débito" id="show-content-radio3">
@@ -146,7 +151,8 @@
             
         <div class="item3">
             <h2>Resumo do pedido</h2>
-            <button id="button">Finalizar pedido</button>
+            <ul id="itensresumo"></ul>
+            <button id="button" onclick="redirecionarFim()">Finalizar pedido</button>
         </div>
 
         </div>

@@ -44,3 +44,9 @@ const form = document.getElementById('forms');
         // Chame a função de inserção de usuário aqui
         // Exemplo: inserirUsuario(nome, celular, email, senha);
     });
+
+// Funções de redirecionamento
+function redirecionarLogin(){
+  var URL = "/Login/login.html";
+  window.location.href = (URL);
+}

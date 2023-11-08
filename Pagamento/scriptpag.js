@@ -21,3 +21,9 @@ showContentRadio3.addEventListener('change', function() {
       content3.style.display = 'none';
     }
 });
+
+//função de redirecionamento
+function redirecionarFim(){
+  var URL = "/Pagamento/compraRealizada.html";
+  window.location.href = (URL);
+}

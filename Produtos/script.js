@@ -136,3 +136,19 @@ function submitData() {
     });
 }
 
+// Funções de redirecionamento
+
+function redirecionarCarrinho(){
+  var URL = "/Produtos/carrinho.html";
+  window.location.href = (URL);
+}
+
+function redirecionarCadastro(){
+  var URL = "/Cadastro/cadastro.html";
+  window.location.href = (URL);
+}
+
+function redirecionarLogin(){
+  var URL = "/Login/login.html";
+  window.location.href = (URL);
+}

@@ -56,10 +56,11 @@
     align-content:end;
 }
 
-a{
+.in{
     text-decoration: none;
     color: #593B38;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 #entrar{
