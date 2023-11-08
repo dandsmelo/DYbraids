@@ -105,34 +105,32 @@ function decrementar() {
 
 //banco de dados teste
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-  host: 'localhost',  // Endereço do servidor MySQL
-  user: 'seu_usuario', // Seu nome de usuário MySQL
-  password: '92673185', // Sua senha MySQL
-  database: 'DYBraids' // Nome do banco de dados que deseja acessar
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'DYbraids'
 });
 
-connection.connect(err => {
-  if (err) {
-    console.error('Erro na conexão ao banco de dados: ' + err.message);
-    return;
-  }
-  console.log('Conexão bem-sucedida ao banco de dados.');
-  // Agora você pode executar consultas SQL e interagir com o banco de dados.
+connection.connect((err) => {
+    if (err) {
+        console.error('Erro na conexão com o banco de dados: ' + err.stack);
+        return;
+    }
+    console.log('Conexão bem-sucedida ao banco de dados.');
 });
 
-// Exemplo de consulta
-connection.query('SELECT * FROM sua_tabela', (err, results) => {
-  if (err) {
-    console.error('Erro na consulta: ' + err.message);
-    return;
-  }
-  console.log('Resultados da consulta:', results);
-});
+function submitData() {
+    const inputData = document.getElementById('inputData').value;
 
-// Não se esqueça de encerrar a conexão quando terminar
-connection.end();
-
+    connection.query('INSERT INTO sua_tabela (campo) VALUES (?)', [inputData], (err, results) => {
+        if (err) {
+            console.error('Erro ao inserir dados: ' + err);
+            return;
+        }
+        console.log('Dados inseridos com sucesso.');
+    });
+}
 

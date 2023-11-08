@@ -19,3 +19,6 @@ INSERT INTO Produtos (nome, preco) VALUES
 ('Rabo Ondulado', 100.00),
 ('Lace Rihanna', 130.00),
 ('Rabo Liso', 150.00);
+
+
+select * from produtos;
