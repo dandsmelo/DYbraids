@@ -75,7 +75,7 @@ function exibirCarrinhoResumo() {
 
   carrinho.forEach(function (item) {
     var li = document.createElement("li");
-    li.textContent = item.nome + " - R$" + (item.preco * item.quantidade).toFixed(2);
+    li.textContent = item.nome + " --- R$" + (item.preco * item.quantidade).toFixed(2);
     listaItens.appendChild(li);
     total += item.preco * item.quantidade;
   });
