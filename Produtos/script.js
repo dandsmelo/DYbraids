@@ -34,20 +34,24 @@ function exibirCarrinho() {
     var imagem = document.createElement("img");
     imagem.src = item.imagem;
 
-    var quantidade = document.createTextNode(item.quantidade);
-    var valor = document.createTextNode("R$" + (item.preco * item.quantidade).toFixed(2));
+    var quantidadeElement = document.createElement("span");
+    quantidadeElement.textContent =  + item.quantidade;
+
+    var valorElement = document.createElement("span");
+    valorElement.textContent = "Valor: R$" + (item.preco * item.quantidade).toFixed(2);
 
     li.appendChild(imagem);
-    li.appendChild(quantidade);
-    li.appendChild(valor);
+    li.appendChild(quantidadeElement);
+    li.appendChild(valorElement);
 
     listaItens.appendChild(li);
 
     total += item.preco * item.quantidade;
   });
 
-  document.getElementById("total").textContent = total.toFixed(2);
+  document.getElementById("total").textContent = "R$" + total.toFixed(2);
 }
+
 
 
 // Exibir o carrinho ao carregar a página
