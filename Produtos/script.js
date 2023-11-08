@@ -18,6 +18,8 @@ function adicionarProduto(nome, preco, imagem) {
   sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
   exibirCarrinho();
   exibirCarrinhoResumo(); // Atualiza também o resumo do pedido
+
+  alert("1 Produto adicionado ao carrinho");
 }
 
 // Função para exibir o carrinho
@@ -38,7 +40,7 @@ function exibirCarrinho() {
     quantidadeElement.textContent =  + item.quantidade;
 
     var valorElement = document.createElement("span");
-    valorElement.textContent = "Valor: R$" + (item.preco * item.quantidade).toFixed(2);
+    valorElement.textContent = "R$" + (item.preco * item.quantidade).toFixed(2);
 
     li.appendChild(imagem);
     li.appendChild(quantidadeElement);
@@ -49,7 +51,7 @@ function exibirCarrinho() {
     total += item.preco * item.quantidade;
   });
 
-  document.getElementById("total").textContent = "R$" + total.toFixed(2);
+  document.getElementById("total").textContent = "TOTAL = R$" + total.toFixed(2);
 }
 
 

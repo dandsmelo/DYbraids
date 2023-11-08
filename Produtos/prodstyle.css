@@ -8,6 +8,17 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.logotipo{
+  margin-right: 15px;
+  color: #593B38;
+  width: 150px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #logo{
@@ -67,6 +78,10 @@ a{
     
 }
 
+.produto{
+  text-align: center;
+}
+
 .info{
     display:flex;
     flex-direction: row;
@@ -83,7 +98,6 @@ a{
 button {
     border: none;
     background-color: transparent;
-    padding: 5px 25px 5px 25px;
     margin: 0;
     font-size: inherit;
     font-family: inherit;
@@ -92,6 +106,7 @@ button {
     border-radius:5px ;
     align-items: center;
     color: #593B38;
+    padding: 0;
   }
   
   button:hover{

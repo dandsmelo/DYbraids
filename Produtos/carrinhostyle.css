@@ -45,7 +45,6 @@ header > div{
 #esquerda{
     background-color:white;
     width: 50%;
-    height: 100vh;
     border-radius: 10px;
     padding: 20px;
     align-items: center;
@@ -59,7 +58,7 @@ header > div{
 }
 
 #tittles h3{
-    margin: 0 30px 10px 30px;
+    margin: 0 40px 10px 40px;
 }
 
 hr{
@@ -110,9 +109,13 @@ ul, li{
     border-radius: 10px;
     padding: 20px;
     display: flex;
-    
 
 }
+
+#itensCarrinho{
+    width: 500px;
+}
+
 #itensCarrinho li {
     display: flex; /* Use flexbox para organizar os elementos */
     justify-content: space-between; /* Espaço igual entre os elementos */
@@ -122,6 +125,7 @@ ul, li{
   #itensCarrinho img {
     flex: 1; /* A imagem ocupa 1/3 da largura */
     margin: 10px; /* Espaço à direita da imagem */
+    border-radius: 10px;
   }
   
   #itensCarrinho span {
@@ -136,14 +140,13 @@ ul, li{
   
 #compre, #tota{
     background-color: white;
-    position: absolute;
-    top:540px;
 }
 
 #compre{
-    margin-top: 50px;
+    margin-top: 10px;
     border-style: none;
     text-align: center;
+    bottom: 0;
 }
 
 #itensCarrinho li, ul, #tota{
@@ -222,6 +225,7 @@ p{
     padding: 5px 0 5px 0;
     font-size: 17px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 /*BOTÃO COMPRAR*/
@@ -269,4 +273,8 @@ p{
 #itensCarrinho img{
     width: 100px;
     height: 150px;
+}
+
+#itensresumo{
+    margin-bottom: 10px;
 }
