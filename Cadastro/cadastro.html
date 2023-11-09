@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="cadastrostyle.css">
+    <link rel="icon" href="../logo.png" type="image/png" id="iconUrl">
     <title>Cadastro</title>
 </head>
 <body>
@@ -19,11 +20,11 @@
                     <form id="forms">
                         <h4>Cadastre-se</h4>
     
-                        <input type="text" class="inputinhos" placeholder="Nome" required>
-                        <input type="email" class="inputinhos" placeholder="Email" required>
-                        <input type="password" class="inputinhos" placeholder="Senha" required>
+                        <input type="text" class="inputinhos" id="nome" placeholder="Nome" required>
+                        <input type="email" class="inputinhos" id="email" placeholder="Email" required>
+                        <input type="password" class="inputinhos" id="senha" placeholder="Senha" required>
                     
-                        <button type="submit" id="cadastrar" onclick="cadastrar()">Cadastrar</button><br>
+                        <button type="submit" id="cadastrar" onclick="inserirUsuario()">Cadastrar</button><br>
     
                         <label onclick="redirecionarLogin()" id="ahaccount">Já possui conta?</label>
                     </form>

@@ -19,7 +19,7 @@ function adicionarProduto(nome, preco, imagem) {
   exibirCarrinho();
   exibirCarrinhoResumo(); // Atualiza também o resumo do pedido
 
-  alert("1 Produto adicionado ao carrinho");
+  window.alert("Produto adicionado ao carrinho");
 }
 
 // Função para exibir o carrinho
@@ -139,7 +139,7 @@ function submitData() {
 // Funções de redirecionamento
 
 function redirecionarCarrinho(){
-  var URL = "/Produtos/carrinho.html";
+  var URL = "../Produtos/carrinho.html";
   window.location.href = (URL);
 }
 
