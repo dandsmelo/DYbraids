@@ -20,11 +20,11 @@
                     <form id="forms">
                         <h4>Cadastre-se</h4>
     
-                        <input type="text" class="inputinhos" id="nome" placeholder="Nome" required>
-                        <input type="email" class="inputinhos" id="email" placeholder="Email" required>
-                        <input type="password" class="inputinhos" id="senha" placeholder="Senha" required>
+                        <input type="text" class="inputinhos" id="nome" name="nome" placeholder="Nome" required>
+                        <input type="email" class="inputinhos" id="email" name="email" placeholder="Email" required>
+                        <input type="password" class="inputinhos" id="senha" name="senha" placeholder="Senha" required>
                     
-                        <button type="submit" id="cadastrar" onclick="inserirUsuario()">Cadastrar</button><br>
+                        <button type="submit" id="cadastrar" onclick="redirecionarProduto()">Cadastrar</button><br>
     
                         <label onclick="redirecionarLogin()" id="ahaccount">Já possui conta?</label>
                     </form>
@@ -32,6 +32,34 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("forms").addEventListener("cadastrar", function (event) {
+          event.preventDefault();
+          const nome = document.getElementById("nome").value;
+          const email = document.getElementById("email").value;
+          const senha = document.getElementById("senha").value;
+
+          fetch("/cadastrar-usuario", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ nome, email, senha }),
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert("Cadastro realizado com sucesso!");
+                redirecionarProduto();
+              } else {
+                alert("Erro ao cadastrar o usuário. Tente novamente.");
+              }
+            })
+            .catch((error) => {
+              console.error("Erro ao fazer a requisição:", error);
+            });
+        });
+      </script>
 </body>
 <script src="code.js"></script>
 </html>
