@@ -16,17 +16,19 @@
     width: 100vw;
     height: 100vh;
 }
+
 #title{
-    font-size: 70px;
+    font-size: 100px;
+    margin-bottom: 10px;
 }
 
 button{
     background-color: #ffff;
     color:#593B38;
     border-style: none;
-    border-radius: 50px;
+    border-radius: 30px;
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     margin-top: 20px;
     cursor: pointer;
 }
