@@ -37,10 +37,41 @@ function exibirCarrinho() {
     imagem.src = item.imagem;
 
     var quantidadeElement = document.createElement("span");
-    quantidadeElement.textContent =  + item.quantidade;
+    quantidadeElement.textContent = " ";
+    
+    var decrementarButton = document.createElement("button");
+    decrementarButton.textContent = "-";
+    decrementarButton.onclick = function () {
+      if (item.quantidade > 0) {
+        item.quantidade--;
+        contador.textContent = item.quantidade;
+        if (item.quantidade === 0) {
+          contador.style.display = "none";
+        }
+        atualizarQuantidadeEValor();
+      }
+    };
+
+    var contador = document.createElement("span");
+    contador.textContent = item.quantidade;
+    contador.id = "contador-" + item.nome;
+    contador.style.display = item.quantidade > 0 ? "inline" : "none";
+
+    var incrementarButton = document.createElement("button");
+    incrementarButton.textContent = "+";
+    incrementarButton.onclick = function () {
+      item.quantidade++;
+      contador.textContent = item.quantidade;
+      contador.style.display = "inline";
+      atualizarQuantidadeEValor();
+    };
 
     var valorElement = document.createElement("span");
     valorElement.textContent = "R$" + (item.preco * item.quantidade).toFixed(2);
+
+    quantidadeElement.appendChild(decrementarButton);
+    quantidadeElement.appendChild(contador);
+    quantidadeElement.appendChild(incrementarButton);
 
     li.appendChild(imagem);
     li.appendChild(quantidadeElement);
@@ -53,6 +84,7 @@ function exibirCarrinho() {
 
   document.getElementById("total").textContent = "TOTAL = R$" + total.toFixed(2);
 }
+
 
 
 

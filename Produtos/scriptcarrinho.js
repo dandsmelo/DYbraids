@@ -14,3 +14,6 @@ function redirecionarPagamento(){
     var URL = "/Pagamento/pagamento.html";
     window.location.href = (URL);
   }
+
+  
+
