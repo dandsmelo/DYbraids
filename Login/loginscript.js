@@ -10,7 +10,6 @@ function login() {
 
     for (let i = 0; i < dados.length; i++) {
         if (nome === dados[i].nome && senha == dados[i].senha) {
-            alert("Logado!");
 
             window.location.href = 'http://127.0.0.1:5500/Produtos/produtos.html';
 
