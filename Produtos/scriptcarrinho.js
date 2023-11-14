@@ -9,11 +9,7 @@ direita.addEventListener('mouseleave', () => {
     adicionarFormaPagamentoButton.style.display = 'none'; // Oculta o botão ao tirar o mouse da div
 });
 
-//Função de redirecionamento
-function redirecionarPagamento(){
-    var URL = "/Pagamento/pagamento.html";
-    window.location.href = (URL);
-  }
+
 
   
 

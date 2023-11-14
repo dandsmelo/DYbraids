@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 .logotipo{
@@ -83,6 +84,11 @@
   text-align: center;
 }
 
+.produto:hover{
+  border-color: #141414;
+  box-shadow: 20px solid #141414;
+}
+
 .info{
     display:flex;
     flex-direction: row;
@@ -115,6 +121,19 @@ button {
     color: #F5F5F5;
     transition: 0.3s;
   }
+
+  #buttonHover{
+    display: none;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  #buttonHover.mostrar{
+    display: block;
+  }
+
 
   #carr{
     display: flex;
