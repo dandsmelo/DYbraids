@@ -1,47 +1,52 @@
-const database = require('../config/index')
-const tabela = require('../models/userModels')
+const database = require('../config/index');
+const tabela = require('../models/userModels');
+const bcrypt = require('bcrypt');
 
-class LoginControllers{
-    static async Cadastrar(req, res){
-        await database.sync()
-        let data = await tabela.findAll({raw : true});
-        let array = Object.keys(data)
-        let registros = Object.values(data)
-        let verificacao = true
-        for(let i = 0; i < array.length; i++){
-            console.log(req.body.Nome, registros[i].Nome)
-            if(req.body.Nome == registros[i].Nome){
-                verificacao = false
-            }
-        }
-        if(verificacao == true){
-            const resultadoCreate = await tabela.create(req.body)
-            console.log(resultadoCreate);
-            res.status(200).json("cadastrado")
-        }
+class LoginControllers {
+  static async Cadastrar(req, res) {
+    try {
+      await database.sync();
 
-        if(verificacao == false){
-            res.send('usuario existente')
-        }
+      const existingUser = await tabela.findOne({ where: { Nome: req.body.Nome } });
+
+      if (existingUser) {
+        return res.status(409).json({ message: 'Usuário já existe.' });
+      }
+
+      const hashedPassword = await bcrypt.hash(req.body.Senha, 10);
+      req.body.Senha = hashedPassword;
+
+      const resultadoCreate = await tabela.create(req.body);
+      console.log(resultadoCreate);
+      res.status(200).json({ message: 'Cadastrado com sucesso.' });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro interno do servidor.' });
     }
+  }
 
-    static async Login(req, res){
-        await database.sync();
-        let data = await tabela.findAll({raw : true});
-        let array = Object.keys(data)
-        let registros = Object.values(data)
-        let verificacao = false
-        for(let i = 0; i < array.length; i++){
-            if(req.body.Senha == registros[i].Senha && req.body.Nome == registros[i].Nome){
-                verificacao = true
-            }
-        }
-        if(verificacao == true){
-            res.status(200).json(1)
-        }else{
-            res.send('login invalido')
-        }
+  static async Login(req, res) {
+    try {
+      await database.sync();
+
+      const user = await tabela.findOne({ where: { Nome: req.body.Nome } });
+
+      if (!user) {
+        return res.status(401).json({ message: 'Usuário não encontrado.' });
+      }
+
+      const passwordMatch = await bcrypt.compare(req.body.Senha, user.Senha);
+
+      if (passwordMatch) {
+        res.status(200).json({ message: 'Login bem-sucedido.' });
+      } else {
+        res.status(401).json({ message: 'Credenciais inválidas.' });
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Erro interno do servidor.' });
     }
+  }
 }
 
 module.exports = LoginControllers;
