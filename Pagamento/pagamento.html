@@ -37,8 +37,10 @@
                         <input type="tel" class="inputinhos" placeholder="CPF" required><br>
     
                         <button type="reset" class="button">Limpar</button>
-                        <button type="submit" class="button">Salvar</button>
+                        <button type="submit" class="button" onclick="hideEndereco()">Salvar</button>
                     </form>
+                    <label id="mensagem">Informações Salvas</label>
+        
                 </div>
     
                 <div id="pagamento">
@@ -85,8 +87,15 @@
                                 <option class="option" value="ano">Ano</option>
                             </select><br>
                             <span>
-                                <label id="titulo">Código de segurança</label><br>
+                                <label>Código de segurança</label><br>
                                 <input type="tel" class="inputinhos">
+                            </span><br>
+
+                            <span>
+                                <label id="titulo">Parcelas</label><br>
+                                <span id="blocos">123</span>
+                                <span id="blocos">123</span>
+                                <span id="blocos">123</span>
                             </span>
                            
     

@@ -42,6 +42,20 @@ function exibirCarrinhoResumo() {
 
 exibirCarrinhoResumo();
 
+function hideEndereco(){
+  var hideAdress = document.getElementById('endereço');
+  var mensagem = document.getElementById('mensagem');
+
+  if (hideAdress.style.display === 'none') {
+    hideAdress.style.display = 'block';
+    mensagem.style.display = 'none';
+} else {
+    hideAdress.style.display = 'none';
+    mensagem.style.display = 'block';
+}
+}
+
+
 //função de redirecionamento
 function redirecionarFim(){
   var URL = "/Pagamento/compraRealizada.html";

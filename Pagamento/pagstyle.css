@@ -184,3 +184,15 @@ ul, li{
     color: #F5F5F5;
     margin-top: 10px;
 }
+
+#mensagem{
+    display: none;
+    color: #593B38;
+}
+
+#blocos{
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    color: #B1AEAE;
+}
