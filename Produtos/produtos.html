@@ -9,7 +9,7 @@
     <title>Produtos</title>
 </head>
 <body>
-    <section id="top">
+    <div id="top">
         <div class="logotipo">
             <img src="../logo.png" id="logo"/>
             <label>DY Braids</label>
@@ -24,7 +24,7 @@
             <label class="in" onclick="redirecionarLogin()">Login</label>
             <label class="in" onclick="redirecionarCadastro()">Cadastro</label>
         </div>
-    </section>
+      </div>
     
     <div class="linha">
         <div class="produto">
@@ -32,7 +32,10 @@
             <div class="info">
                 <button onclick="adicionarProduto('Lace Ondulada', 300.00, 'prod01.jpg')">Lace Ondulada - R$ 300,00</button>
             </div>
-          </div>
+            <div class="btnHover">
+              <button id="buttonHover">Adicionar produto</button>
+            </div>
+        </div>
           
           <div class="produto">
             <img id="fotos" src="prod02.jpg" alt="Lace Beyonce">

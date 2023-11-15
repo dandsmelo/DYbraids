@@ -184,3 +184,8 @@ function redirecionarLogin(){
   var URL = "/Login/login.html";
   window.location.href = (URL);
 }
+
+function redirecionarPagamento(){
+  var URL = "/Pagamento/pagamento.html";
+  window.location.href = (URL);
+}
