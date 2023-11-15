@@ -44,11 +44,14 @@
     margin: 0;
     height: 40px;
     cursor: pointer;
+    border: none;
 }
 
 #divBusca{
     display: flex;
     align-items:center;
+
+    
 }
 
 #btnCarrinho{

@@ -7,9 +7,9 @@ class carrinhoControllers {
         await database.sync()
         let requisicao = await tabela.create(req.body)
         res.status(200).json('foi')
-    }
+    }                                                                         v                    
 
-    static async PuxarTodos(req, res) {
+    static async PuxarTodos(req, res) {nn
         await database.sync();
         let data = await tabela.findAll({ raw: true });
         let array = Object.keys(data)

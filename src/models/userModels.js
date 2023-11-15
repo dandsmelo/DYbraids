@@ -1,17 +1,24 @@
 const database = require("../config/index");
-const Sequelize = require("sequelize");
+const { DataTypes } = require("sequelize");
 
-const UserModels = database.define("user", {
+const User = database.define("User", {
     id: {
-        type: Sequelize.INTEGER(4),
+        type: DataTypes.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true,
     },
-    Nome: Sequelize.STRING(100),
-    Senha: Sequelize.STRING(100)
+    Nome: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    },
+    Senha: {
+        type: DataTypes.STRING(100),
+        allowNull: false
+    }
 });
 
-database.sync();
+// Sincronizar o modelo com o banco de dados (isso cria a tabela se ela não existir)
+// database.sync(); -> Esta linha pode ser removida ou ajustada, dependendo da necessidade
 
-module.exports = UserModels;
+module.exports = User;
