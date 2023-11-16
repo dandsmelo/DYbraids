@@ -107,22 +107,24 @@
 
 button {
     border: none;
-    background-color: transparent;
+    background-color: #593B38;
     margin: 0;
-    font-size: inherit;
+    font-size: 15px;
     font-family: inherit;
     font-weight: 500;
     cursor: pointer;
     border-radius:5px ;
     align-items: center;
-    color: #593B38;
-    padding: 0;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
   }
   
   button:hover{
-    background-color:#593B38;
+    background-color:#966561;
     color: #F5F5F5;
-    transition: 0.3s;
+    transition: 0.35s;
+    transform: scale(0.9);
   }
 
   #buttonHover{
@@ -155,11 +157,6 @@ button {
     width: 229px;
     height: 315px;
     transition: 0.35s;
-  }
-
-  #fotos:hover{
-    transform: scale(0.9);
-
   }
 
   img{

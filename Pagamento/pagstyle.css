@@ -133,6 +133,10 @@ input.pag{
     display: none;
 }
 
+.hiddeninputs label{
+    margin-bottom: 5px;
+}
+
 .pag{
     grid-column: 1;
 }
@@ -145,7 +149,7 @@ input.pag{
 }
 
 .hiddeninputs .inputinhos{
-    margin: 10px 0 10px 0;
+    margin: 5px 0 10px 0;
 }
 
 .hiddeninputs .littleinputs{
